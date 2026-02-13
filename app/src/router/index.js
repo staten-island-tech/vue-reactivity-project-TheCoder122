@@ -1,6 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import forge from '@/views/forge.vue'
-import HomeView from '@/views/HomeView.vue'
+import user from '@/views/userflip.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -11,9 +10,9 @@ const router = createRouter({
       component: HomeView,
     },
     {
-      path: '/forge',
-      name: 'forge',
-      component: forge,
+      path: '/userflip',
+      name: 'userflip',
+      component: user,
     },
   ],
 })
