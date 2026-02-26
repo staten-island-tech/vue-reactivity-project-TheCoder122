@@ -1,11 +1,13 @@
 <template>
   <div>
-    <OreCard v-for="ore in ores" :key="ore.name" :ore="ore" />
+    <div class="container">
+      <OreCard v-for="ore in ores" :key="ore.name" :ore="ore" />
+    </div>
   </div>
 </template>
 <script setup>
 import { ref } from 'vue'
-import OreCard from '@/components/metals.vue'
+import OreCard from '@/components/OreCards.vue'
 const ores = ref([
   { name: 'Copper', value: 0.01 },
   { name: 'Iron', value: 0.02 },
@@ -35,4 +37,12 @@ const ores = ref([
   { name: 'Devouring Metal', value: 300000000 },
 ])
 </script>
-<style scoped></style>
+<style scoped>
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+  padding: 20px;
+}
+</style>
