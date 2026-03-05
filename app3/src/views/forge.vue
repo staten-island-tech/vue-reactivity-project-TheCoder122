@@ -2,7 +2,7 @@
   <div>
     <div class="container">
       <OreCard v-for="ore in ores" :key="ore.name" :ore="ore" />
-      <button @click="addOre">Add Ore</button>
+      <div class="add-ore-button"><button @click="addOre">Add Ore</button></div>
     </div>
   </div>
 </template>
