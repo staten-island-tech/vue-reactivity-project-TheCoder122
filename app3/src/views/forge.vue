@@ -54,7 +54,7 @@ const ores = ref([
   { name: 'Star Core', value: 1000000000, weight: 14, img: './starcore.png' },
   { name: 'Extracted Black Hole', value: 7000000000000, weight: 15, img: './blackhole.png' },
   { name: 'Refined Dark Matter', value: 10000000000, weight: 16, img: './darkmatter.png' },
-  { name: 'Grass', value: Number.MAX_SAFE_INTEGER, weight: 17, img: './grass.png' },
+  { name: 'Grass', value: 1000000000000000000000, weight: 17, img: './grass.png' },
   { name: 'Divine Blood', value: 100000000000000, weight: 18, img: './divineblood.png' },
   { name: 'X Corp Extracted Metals', value: 10000000, weight: 19, img: './Xcorpmetal.png' },
   { name: 'Strange Matter', value: 8000000000000, weight: 20, img: './StrangeMatter.png' },
