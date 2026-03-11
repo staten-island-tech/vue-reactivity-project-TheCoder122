@@ -8,19 +8,10 @@
     </section>
     <section class="forge__layout">
       <div class="forge__ores">
-        <OreCard
-          v-for="ore in ores"
-          :key="ore.name"
-          :ore="ore"
-          @select="addOre"
-        />
+        <OreCard v-for="ore in ores" :key="ore.name" :ore="ore" @select="addOre" />
       </div>
       <div class="forge__anvil">
-        <img
-          src="./anvil.png"
-          alt="Anvil"
-          class="forge__anvil-img"
-        />
+        <img src="/anvil.png" alt="Anvil" class="forge__anvil-img" />
         <img
           v-for="(ore, i) in selectedOres"
           :key="i"
@@ -35,7 +26,7 @@
 </template>
 <script setup>
 import { ref, computed } from 'vue'
-import OreCard from '@/components/OreCard.vue'
+import OreCard from '../components/OreCards.vue'
 const ores = ref([
   { name: 'Copper', value: 0.01, weight: 1, img: './copper.png' },
   { name: 'Iron', value: 0.02, weight: 2, img: './iron.png' },
@@ -68,12 +59,8 @@ const selectedOres = ref([])
 function addOre(ore) {
   selectedOres.value.push(ore)
 }
-const totalWeight = computed(() =>
-  selectedOres.value.reduce((sum, ore) => sum + ore.weight, 0)
-)
-const totalValue = computed(() =>
-  selectedOres.value.reduce((sum, ore) => sum + ore.value, 0)
-)
+const totalWeight = computed(() => selectedOres.value.reduce((sum, ore) => sum + ore.weight, 0))
+const totalValue = computed(() => selectedOres.value.reduce((sum, ore) => sum + ore.value, 0))
 </script>
 <style scoped>
 .forge {

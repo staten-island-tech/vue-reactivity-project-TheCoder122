@@ -31,4 +31,19 @@ function select() {
 .ore-card__img {
   width: 60px;
 }
+.ore-card:hover {
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+  background: linear-gradient(145deg, #f0e6ff, #d0caff);
+}
+.ore-card h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #333;
+}
+.ore-card h3 {
+  font-size: 1rem;
+  color: #555;
+}
 </style>
